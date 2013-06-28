@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- // Copyright (c) 2013 tengattack License: GPLv3 -->
+<html>
+  <head>
+    <title>+Widget</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="./css/gpw-options.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div id="content" class="span10">
+          <div class="panel">
+            <div class="header">
+              <ul class="breadcrumb">
+                <li><a href="#">+Widget</a><span class="divider">/</span></li>
+                <li id="i18n-Options" class="active">Options</li>
+              </ul>
+            </div>
+            <div class="inner">
+              <ul id="main-tab" class="nav nav-tabs">
+                <li class="active"><a id="i18n-Home" href="#home" data-toggle="tab">Home</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span id="i18n-Widget">Widget</span>
+                    <b class="caret"></b>
+                  </a>
+                  <ul id="widget-menu" class="dropdown-menu">
+                    <!-- auto generate -->
+                  </ul>
+                </li>
+                <li><a id="i18n-About" href="#about" data-toggle="tab">About</a></li>
+              </ul>
+              <div id="main-tab-content" class="tab-content">
+                <div class="tab-pane fade active in" id="home">
+                  <div id="home-well" class="well">
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="about">
+                  <div class="well">
+                    <p>Author: <a href="http://tengattack.com/" target="blank">腾袭</a> (<a href="https://plus.google.com/101975853170707139492" target="blank">+五月栞</a>)</p>
+                    <p>License: <a href="http://www.gnu.org/licenses/gpl.html" target="blank">GPLv3</a></p>
+                    <p>Copyright &copy; 2013 tengattack</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- scripts -->
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/googlepluswidget.js"></script>
+    <script src="./js/gpw-db.js"></script>
+    <script src="./js/gpw-options.js"></script>
+  </body>
+</html>
+

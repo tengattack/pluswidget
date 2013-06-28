@@ -1,0 +1,26 @@
+{
+  "description": {
+    "message": "为Google+页面添加小部件~ by 五月栞 (tengattack)"
+  },
+  "Options": {
+    "message": "选项"
+  },
+  "Home": {
+    "message": "首页"
+  },
+  "Widget": {
+    "message": "小挂件"
+  },
+  "About": {
+    "message": "关于"
+  },
+  "Enable": {
+    "message": "可用"
+  },
+  "Save": {
+    "message": "保存"
+  },
+  "Reset": {
+    "message": "重置"
+  }
+}

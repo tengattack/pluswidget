@@ -1,0 +1,26 @@
+{
+  "description": {
+    "message": "Add some widgets to Google+ page~ by 五月栞 (tengattack)"
+  },
+  "Options": {
+    "message": "Options"
+  },
+  "Home": {
+    "message": "Home"
+  },
+  "Widget": {
+    "message": "Widget"
+  },
+  "About": {
+    "message": "About"
+  },
+  "Enable": {
+    "message": "Enable"
+  },
+  "Save": {
+    "message": "Save"
+  },
+  "Reset": {
+    "message": "Reset"
+  }
+}

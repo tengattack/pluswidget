@@ -1,0 +1,26 @@
+{
+  "description": {
+    "message": "Google+ページのウィジェットを追加～ by 五月栞 (tengattack)"
+  },
+  "Options": {
+    "message": "設定"
+  },
+  "Home": {
+    "message": "ホームページ"
+  },
+  "Widget": {
+    "message": "ウィジェット"
+  },
+  "About": {
+    "message": "アバウト"
+  },
+  "Enable": {
+    "message": "使用"
+  },
+  "Save": {
+    "message": "保存"
+  },
+  "Reset": {
+    "message": "リセット"
+  }
+}
