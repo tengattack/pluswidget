@@ -10,10 +10,10 @@
 
 ### Update
 * 06/29/2013
-  > Add function
+  > Add functions
   >> Mr. Jingles's words
 
-  > Bugs fix
+  > Fix bugs
   >> Sharebox CSS Style
 
 * 06/28/2013
