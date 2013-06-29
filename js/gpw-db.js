@@ -230,6 +230,7 @@ sharebox:
   position: absolute;\
   background: url('%url%') no-repeat;\
   bottom: 0px;\
+  z-index: 9;\
   background-size: %width%px %height%px;\
   width: %width%px;\
   height: %height%px !important;\
