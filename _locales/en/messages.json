@@ -11,6 +11,9 @@
   "Widget": {
     "message": "Widget"
   },
+  "Function": {
+    "message": "Function"
+  },
   "About": {
     "message": "About"
   },

@@ -7,3 +7,11 @@
 
 ### Chrome Web Store
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
+
+### Update
+* 06/29/2013
+  Add function
+    Mr. Jingles's words
+  
+* 06/28/2013
+  Start

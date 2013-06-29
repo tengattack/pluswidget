@@ -5,7 +5,7 @@
 
 var WIDGET = {
   bell: {
-    name: "Bell",
+    name: "Mr. Jingles",
     author: "+Yad Smood",
     author_url: "https://plus.google.com/102757381513466698052",
     preview_url: "https://lh4.googleusercontent.com/-tBZUv4ewRs8/UchvG1pJGcI/AAAAAAAAB1E/99meKgaXCQE/s0/gplus_bell_replacer.jpg",
@@ -164,6 +164,37 @@ var WIDGET = {
   }
 };
 
+var FUNCTION = {
+  belltext: {
+    name: "Mr. Jingles's words",
+    author: "+五月栞 (腾袭)",
+    author_url: "https://plus.google.com/101975853170707139492",
+    preview_url: "https://lh6.googleusercontent.com/-6LJEqWfKkyk/Uc4tC_xK1PI/AAAAAAAAQ0g/RNnP-F8BxDE/s0/Mr.+Jingles%27s+words.PNG",
+    description: "Change Mr. Jingles's words.",
+    settings: {
+      text: {
+        name: 'Text',
+        type: 'string',
+        escape: true,
+        placeholder: 'Text',
+        default: "神兄さま、未読はありませんー"
+      }
+    }
+  },
+  custom: {
+    name: "Custom",
+    author: "You",
+    description: "You can put custom JS here.",
+    settings: {
+      content: {
+        name: 'Content',
+        type: 'text',
+        default: ""
+      },
+    }
+  }
+};
+
 var CSS_STYLE = {
 bell:
 ".nTe87e {\
@@ -241,6 +272,21 @@ notify_pane:
   right: %right%px;\
   width: %width%px;\
   height: %height%px;\
+}",
+
+custom: "%content%"
+};
+
+var JS_RUN = {
+belltext:
+"var el = document.getElementsByClassName('lxZn6b');\
+if (el !== undefined && el.length > 0) {\
+  el[0].addEventListener('DOMSubtreeModified', function () {\
+    var belltextel = document.getElementsByClassName('CogtQ');\
+    if (belltextel !== undefined && belltextel.length > 0) {\
+      belltextel[0].innerText = \"%text%\";\
+    }\
+  }, false);\
 }",
 
 custom: "%content%"

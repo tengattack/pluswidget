@@ -11,6 +11,9 @@
   "Widget": {
     "message": "小挂件"
   },
+  "Function": {
+    "message": "功能"
+  },
   "About": {
     "message": "关于"
   },

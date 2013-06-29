@@ -4,4 +4,5 @@
 var gpw = new GooglePlusWidget();
 gpw.init(function () {
   gpw.setstyle();
+  gpw.runjs();
 });

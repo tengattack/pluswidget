@@ -36,13 +36,25 @@ GooglePlusWidget.prototype.pageaddstyle = function (content) {
   document.getElementsByTagName("head")[0].appendChild(style);
 };
 
+GooglePlusWidget.prototype.escape = function (str) {
+  return String(str)
+          .replace(/"/g, "\\\"")
+          .replace(/'/g, "\\'");
+};
+
+GooglePlusWidget.prototype.unescape = function (str) {
+  return String(str)
+          .replace(/\\\"/g, "\"")
+          .replace(/\\'/g, "'");
+};
+
 GooglePlusWidget.prototype.setstyle = function () {
   if (!this.storage) {
     return;
   }
   if (this.storage.widget) {
     var style = '';
-    for (w in this.storage.widget) {
+    for (var w in this.storage.widget) {
       var widgets = this.storage.widget;
       if (widgets[w] && widgets[w].enable && widgets[w].settings && CSS_STYLE[w]) {
         var substyle = CSS_STYLE[w];
@@ -59,6 +71,33 @@ GooglePlusWidget.prototype.setstyle = function () {
     }
     if (style) {
       this.pageaddstyle(style);
+    }
+  }
+};
+
+GooglePlusWidget.prototype.runjs = function () {
+  if (!this.storage) {
+    return;
+  }
+  if (this.storage.function) {
+    for (var id in this.storage.function) {
+      var functions = this.storage.function;
+      if (functions[id] && functions[id].enable && functions[id].settings && JS_RUN[id]) {
+        var subjs = JS_RUN[id];
+        for (key in functions[id].settings) {
+          try {
+            var regexp = new RegExp('%' + key + '%', 'g');
+            var text = functions[id].settings[key];
+            subjs = subjs.replace(regexp, text);
+          } catch (e) {
+            break;
+          }
+        }
+        try {
+          eval(subjs);
+        } catch (e) {
+        }
+      }
     }
   }
 };

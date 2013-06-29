@@ -11,6 +11,9 @@
   "Widget": {
     "message": "ウィジェット"
   },
+  "Function": {
+    "message": "機能"
+  },
   "About": {
     "message": "アバウト"
   },
