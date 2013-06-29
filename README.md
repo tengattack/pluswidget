@@ -10,8 +10,8 @@
 
 ### Update
 * 06/29/2013
-  Add function
-    Mr. Jingles's words
+  > Add function
+  >> Mr. Jingles's words
   
 * 06/28/2013
-  Start
+  > Start
