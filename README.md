@@ -12,6 +12,8 @@
 * 06/29/2013
   > Add function
   >> Mr. Jingles's words
-  
+  > Bugs fix
+  >> Sharebox CSS Style
+
 * 06/28/2013
   > Start
