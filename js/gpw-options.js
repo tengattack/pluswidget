@@ -216,7 +216,8 @@ function initOptions() {
               <textarea id="' + inputId + '" name="' + inputName + '" class="span5" style="height: 300px;">' + value + '</textarea>';
             break;
           case 'range':
-            tabcontent += '<input type="text" id="' + inputId + '" name="' + inputName + '" class="span2 slider" value=""\
+            tabcontent += '<input type="text" id="' + inputId + '" name="' + inputName + '" class="span2 slider" \
+              value="' + value + '"\
               data-slider-min="' + settings[s].range.min + '" \
               data-slider-max="' + settings[s].range.max + '" \
               data-slider-step="' + settings[s].range.step + '" \

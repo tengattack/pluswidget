@@ -13,6 +13,9 @@
   > Add widgets
   >> Background
 
+  > Fix bugs
+  >> Slider initial value
+
 * 06/29/2013
   > Add functions
   >> Mr. Jingles's words
