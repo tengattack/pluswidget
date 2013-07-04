@@ -16,6 +16,12 @@ function htmlencode(str) {
           .replace(/>/g, '&gt;');
 }
 
+function htmlencode_extra(str) {
+  return String(str)
+          .replace(/\n/g, '<br>')
+          .replace(/\r/g, '');
+}
+
 function saveSettings(cat, id) {
 
   var settings;
@@ -272,6 +278,14 @@ $(document).ready(function() {
 
   // i18n
   $('#home-well').text(chrome.i18n.getMessage("description"));
+  $.ajax({
+    url: './README.md',
+    success: function (data) {
+      data = htmlencode(data);
+      data = htmlencode_extra(data);
+      $('#home-well').html(data);
+    }
+  });
   $('[id^="i18n-"]').each(function (index, value) {
     var el = $(this);
     var id = el.attr('id');

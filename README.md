@@ -9,6 +9,10 @@
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
 ### Update
+* 07/04/2013
+  > Add widgets
+  >> Background
+
 * 06/29/2013
   > Add functions
   >> Mr. Jingles's words
