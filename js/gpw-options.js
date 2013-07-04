@@ -46,6 +46,9 @@ function saveSettings(cat, id) {
       case 'text':
         value = $('#' + inputId).val();
         break;
+      case 'range':
+        value = $('#' + inputId).val();
+        break;
     }
     if (value === undefined) {
       continue;
@@ -101,6 +104,9 @@ function resetSettings(cat, id) {
       case 'string':
       case 'text':
         $('#' + inputId).val(value);
+        break;
+      case 'range':
+        $('#' + inputId).slider('setValue', value)
         break;
     }
   }
@@ -203,6 +209,16 @@ function initOptions() {
             tabcontent += '\
               <textarea id="' + inputId + '" name="' + inputName + '" class="span5" style="height: 300px;">' + value + '</textarea>';
             break;
+          case 'range':
+            tabcontent += '<input type="text" id="' + inputId + '" name="' + inputName + '" class="span2 slider" value=""\
+              data-slider-min="' + settings[s].range.min + '" \
+              data-slider-max="' + settings[s].range.max + '" \
+              data-slider-step="' + settings[s].range.step + '" \
+              data-slider-value="' + value + '" \
+              data-slider-orientation="horizontal" \
+              data-slider-selection="after" \
+              data-slider-tooltip="hide">';
+            break;
         }
         tabcontent += '</div>\
           </div>';
@@ -234,6 +250,7 @@ function initOptions() {
     var subids = id.split('-');
     resetSettings(subids[2], subids[3]);
   });
+  $('input.slider').slider();
 }
 
 function initPage() {
