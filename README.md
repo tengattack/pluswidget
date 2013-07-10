@@ -9,7 +9,7 @@
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
 ### Update
-* 09/04/2013
+* 07/09/2013
   > Fix bugs
   >> Mr. Jingles's words (Google Update CSS class name)
 
