@@ -71,7 +71,13 @@ if (currVersion != prevVersion) {
   if (typeof prevVersion == 'undefined') {
     onInstall();
   } else {
-    onUpdate();
+    var curvs = currVersion.split('.');
+    var prevs = prevVersion.split('.');
+    if (curvs && prevs && curvs.length >= 3 && prevs.length >= 3) {
+      if (curvs[1] != prevs[1]) {
+        onUpdate();
+      }
+    }
   }
   localStorage['version'] = currVersion;
 }
