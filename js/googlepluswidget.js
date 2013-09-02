@@ -58,6 +58,42 @@ GooglePlusWidget.prototype.setstyle = function () {
       var widgets = this.storage.widget;
       if (widgets[w] && widgets[w].enable && widgets[w].settings && CSS_STYLE[w]) {
         var substyle = CSS_STYLE[w];
+        var opreg = substyle.match(/%\{(.+?)\}%/g);
+        if (opreg && opreg.length) {
+          var envvardef = '';
+          for (key in widgets[w].settings) {
+            envvardef += 'var ' + key + ' = ';
+            switch (WIDGET[w].settings[key].type) {
+            case 'string':
+            case 'text':
+              envvardef += '"' + widgets[w].settings[key] + '"';
+              break;
+            default:
+              envvardef += widgets[w].settings[key]
+              break;
+            }
+            envvardef += ";\n";
+          }
+          for (var i = 0; i < opreg.length; i++) {
+            /* var bsame = false;
+            for (var j = 0; j < i; j++) {
+              if (opreg[i] === opreg[j]) {
+                bsame = true;
+              }
+            }
+            if (bsame) {
+              continue;
+            } */
+            var opeval = opreg[i].substr(2, opreg[i].length - 4);
+            var ev = envvardef + 'var __t = ('+ opeval + ');';
+            try {
+              eval(ev);
+              substyle = substyle.replace(opreg[i], __t);
+            } catch (e) {
+              break;
+            }
+          }
+        }
         for (key in widgets[w].settings) {
           try {
             var regexp = new RegExp('%' + key + '%', 'g');

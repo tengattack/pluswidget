@@ -9,7 +9,13 @@
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
 ### Update
-* 07/09/2013
+* 09/02/2013
+  > Add
+  >> Height in Mr. Jingles
+  > Fix bugs
+  >> Mr. Jingles (Update after G+ has changed its style)
+  
+* 07/20/2013
   > Fix bugs
   >> Mr. Jingles's words (Google Update CSS class name)
 
