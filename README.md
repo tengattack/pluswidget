@@ -12,6 +12,7 @@
 * 09/02/2013
   > Add
   >> Height in Mr. Jingles
+
   > Fix bugs
   >> Mr. Jingles (Update after G+ has changed its style)
   
