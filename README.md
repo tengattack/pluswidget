@@ -9,6 +9,10 @@
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
 ### Update
+* 10/06/2013
+  > Fix bugs
+  >> Google changed G+ class name
+
 * 09/02/2013
   > Add
   >> Height in Mr. Jingles
