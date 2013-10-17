@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "name": "+Widget",
   "default_locale": "en",
-  "version": "0.963.5",
+  "version": "0.963.7",
   "description": "__MSG_description__",
   "permissions": [
     "storage",
@@ -38,5 +38,5 @@
     "default_title": "+Widget"
   },
   "offline_enabled": false,
-  "homepage_url": "http://tengattack.com/"
+  "homepage_url": "https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp"
 }

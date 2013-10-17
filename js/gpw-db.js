@@ -240,16 +240,16 @@ var FUNCTION = {
 
 var CSS_STYLE = {
 bell:
-".FOb {\
+".CQb {\
   /* Change the image url you prefer here. */\
   background-image: url('%url%');\
 }\
-.GOb {\
+.axb {\
   /* Hide the original bell. */\
   visibility: hidden;\
   height: %{height + 16}%px;\
 }\
-.FOb {\
+.CQb {\
   /* Set the new bell's position. */\
   background-repeat: no-repeat;\
   background-size: auto %{height}%px;\
@@ -257,18 +257,18 @@ bell:
 }",
 
 sharebox: 
-".Ae {\
+".hd {\
   position: relative;\
 }\
-.Ae .xoa * {\
+.hd .jqa * {\
   display: none;\
 }\
-.Ae .xoa {\
+.hd .jqa {\
   transition: left 2s;\
   -webkit-transition: left 2s;\
   left: 0;\
 }\
-.Ae .xoa {\
+.hd .jqa {\
   display: block !important;\
   float: left;\
   position: absolute;\
@@ -282,10 +282,10 @@ sharebox:
 }",
 
 ribbon_home: 
-".lid {\
+".Msd {\
   overflow: visible !important;\
 }\
-.lid::before {\
+.Msd::before {\
   position: absolute;\
   content: url('%url%');\
   width: %width%px;\
@@ -296,7 +296,7 @@ ribbon_home:
 }",
 
 upsidedown:
-".Ev::before {\
+".rw:before {\
   position: absolute;\
   content: url('%url%');\
   width: 100px;\
@@ -308,7 +308,7 @@ upsidedown:
 }",
 
 notify_pane:
-"#notify-widget-pane.N9 .xr {\
+"#notify-widget-pane.Fba .ks {\
   position: absolute;\
   background: url('%url%') no-repeat;\
   z-index: 100;\
@@ -320,17 +320,19 @@ notify_pane:
 }",
 
 background:
-".je{background:url('%url%') no-repeat;background-attachment:fixed}\
-.gb_qb{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gbqfb{opacity:%opacity%;}\
-.zX{background-color:transparent;}.Qc{background-color:rgba(245,245,245,%opacity%) !important;}.dYb{background:transparent !important;}.OLa{background-color:transparent !important;}\
-.NTa{background-color:transparent !important;border:none;}\
-.RTa,.Vfa,.Vfa .Kv{background-color:transparent;}\
-.mOc{opacity:%opacity%;}\
-.te,.cd,.qC,.mGb{background-color:transparent;}.ge,.pc,.Vm,.Re,.DJd{background-color:rgba(255,255,255,%opacity%);border-color:rgba(216,216,216,%opacity%);}.Xe,.rc{background-color:rgba(255,255,255,%aopacity%) !important;}.qq{background-color:rgba(248,248,248,%aopacity%);}.Z0,.gua{background-color:rgba(248,248,248,%opacity%);border-color:rgba(216,216,216,%opacity%);}.Qp,.Vfa .Qp{background-color:transparent;}\
-.tj,.Sc,.oQ,.jC,.sy,.tQ,.lQ,.Ye{background-color:transparent;}\
-.Yla,.Ql{background-color:transparent;}.Yla:before,.Ql:before{background:none;}\
-.Dc,.Dc.esw,.Dg,.Nt,.b-c-U,.iu .b-c-U,.b-c-ca,.wo,.bh:hover .Um,.Qd,.nx,.YH .b-O,.b-eb,.Cd>.eswd,.Nn .Rf,.yl .Rf,.g-h-f-yc-B,.g-h-f-W-jb{background-color:rgba(255,255,255,%aopacity%);}.b-c-T{background-color:rgba(66,127,237,%opacity%);}.su{background-color:transparent;}.Dc,.Dc.esw,.Dg{border-color:rgba(217,217,217,%aopacity%);}.Nn .Rf,.yl .Rf{border-color:rgba(216,216,216,%aopacity%);}.d-zj{border-color:rgba(235,235,235,%aopacity%);}.wo{border-color:rgba(204,204,204,%aopacity%);}.Nt{border-color:rgba(221,221,221,%aopacity%);}.g-h-f-yc-B,.g-h-f-k .g-h-f-W-jb,.nx,.SV,.og,.Qd{border-color:rgba(228,228,228,%aopacity%);}.og{background-color:transparent;}.yg .Oda,.dM{border:none;}.yg .Pda{border-top-color:rgba(255,255,255,%aopacity%);}.g-h-f-yc-B:hover{border-color:rgba(220,220,220,%aopacity%);}.g-h-f-yc-B-Ms{border-color:rgba(208,208,208,%aopacity%);}.qh{background-color:rgba(245,245,245,%aopacity%);}.vo{border-top:16px solid rgba(228,228,228,%aopacity%);border-left:16px solid transparent;border-bottom:none;border-right:none;}\
-.Zf,.vA,.oW,.qq>.Ds,.Ej>.Mi{border-color:rgba(229,229,229,%aopacity%);}\
+".Td{background:url('%url%') no-repeat;background-attachment:fixed}\
+.gb_qb{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
+.GY{background-color:transparent;}.Uc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb{background:transparent !important;}\
+.SOb{background-color:transparent !important;border:none;}\
+.t3{background-color:transparent;}.TQc{opacity:%opacity%;}\
+.ve,.Yp,.Xa{background-color:transparent;}.Ee,.b2,.Zva,.Sb,.Ue{background-color:rgba(255,255,255,%opacity%);border-color:rgba(216,216,216,%opacity%);}.eNd,.hn{background-color:rgba(255,255,255,%opacity%)}\
+.fr,.cO .by .MHa:hover,.cO .by .fya:hover{background-color:rgba(248,248,248,%aopacity%);}.hf{background-color:rgba(255,255,255,%aopacity%) !important;}.ej,.kv{background-color:rgba(245,245,245,%aopacity%);}\
+.WR,.TC,.bD,.TR,.vy,.bS,.zj,.Xc,.if,.em,.aIb,.Bha,.Bha .jw,.Bha .Yp,.cS,.nB,.Bc,.eg,.MR,.fm{background-color:transparent;}.em:before{background:none}\
+.b-c-R,.Gc.esw,.Dg,.wu,.cp,.b-hb,.Id>.eswd,.es,.FF .b-P,.g-h-f-vc-B,.g-h-f-V-nb,.Rd,.cO .by .HY,.b-c-R.b-c-I,.FC,.Zg:hover .gn{background-color:rgba(255,255,255,%aopacity%)}.cc{background-color:rgba(255,255,255,%aopacity%) !important;}.Gc.esw,.Dg,.b-hb,.Id>.eswd{border-color:rgba(217,217,217,%aopacity%);}.es,.iH,.g-h-f-vc-B,.g-h-f-k .g-h-f-V-nb,.Rd,.eg{border-color:rgba(228,228,228,%aopacity%);}.cO .by .HY{border-color:rgba(248,248,248,%aopacity%);}.wu{border-color:rgba(221,221,221,%aopacity%);}.cp{border-color:rgba(204,204,204,%aopacity%);}\
+.oB,.cg{border-color:rgba(229,229,229,%aopacity%);}.vt,.gi{border-color:rgba(229,229,229,%aopacity%) !important;}.d-cm{border-color:rgba(235,235,235,%aopacity%)}\
+.Pe-ub-Db-Bg-Cl{background-color:rgba(229,229,229,%aopacity%);}\
+.Be .l7{border-top-color:rgba(255,255,255,%aopacity%);}.Be .k7,.oo{display:none;}.VK{border-top: 15px solid rgba(245,245,245,%aopacity%);border-left: 15px solid transparent;border-right:none;border-bottom:none;}\
+.b-c-U{background-color:rgba(66,127,237,%opacity%);}\
 ",
 
 custom: "%content%"
@@ -338,10 +340,10 @@ custom: "%content%"
 
 var JS_RUN = {
 belltext:
-"var el = document.getElementsByClassName('Xub');\
+"var el = document.getElementsByClassName('Uwb');\
 if (el !== undefined && el.length > 0) {\
   el[0].addEventListener('DOMSubtreeModified', function () {\
-    var belltextel = document.getElementsByClassName('Fxa');\
+    var belltextel = document.getElementsByClassName('Kza');\
     if (belltextel !== undefined && belltextel.length > 0) {\
       belltextel[0].innerText = \"%text%\";\
     }\
