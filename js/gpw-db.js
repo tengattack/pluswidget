@@ -340,14 +340,17 @@ custom: "%content%"
 
 var JS_RUN = {
 belltext:
-"var el = document.getElementsByClassName('Uwb');\
+"var belltextNotify = function (e) {\
+  var belltextel = document.getElementsByClassName('Kza');\
+  if (belltextel !== undefined && belltextel.length > 0) {\
+    belltextel[0].innerText = \"%text%\";\
+  }\
+};\
+var el = document.getElementsByClassName('ZvqKKc');\
 if (el !== undefined && el.length > 0) {\
-  el[0].addEventListener('DOMSubtreeModified', function () {\
-    var belltextel = document.getElementsByClassName('Kza');\
-    if (belltextel !== undefined && belltextel.length > 0) {\
-      belltextel[0].innerText = \"%text%\";\
-    }\
-  }, false);\
+  for (var i = 0; i < el.length; i++) {\
+    el[i].addEventListener('DOMSubtreeModified', belltextNotify, false);\
+  }\
 }",
 
 custom: "%content%"
