@@ -247,7 +247,7 @@ bell:
 .axb {\
   /* Hide the original bell. */\
   visibility: hidden;\
-  height: %{height + 16}%px;\
+  height: %{height + 16}%px !important;\
 }\
 .CQb {\
   /* Set the new bell's position. */\
@@ -321,7 +321,7 @@ notify_pane:
 
 background:
 ".Td{background:url('%url%') no-repeat;background-attachment:fixed}\
-.gb_qb,.gb_cb,.gb_fb{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
+.gb_qb,.gb_fb,.gb_gb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
 .GY{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb{background:transparent !important;}\
 .SOb{background-color:transparent !important;border:none;}\
 .t3{background-color:transparent;}.TQc{opacity:%opacity%;}\
@@ -343,7 +343,10 @@ belltext:
 "var belltextNotify = function (e) {\
   var belltextel = document.getElementsByClassName('Kza');\
   if (belltextel !== undefined && belltextel.length > 0) {\
-    belltextel[0].innerText = \"%text%\";\
+    console.log(belltextel, belltextel[0].innerText);\
+    if (belltextel[0].innerText != \"%text%\" && belltextel[0].innerText != \"\") {\
+      belltextel[0].innerText = \"%text%\";\
+    }\
   }\
 };\
 var el = document.getElementsByClassName('ZvqKKc');\

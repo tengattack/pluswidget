@@ -9,6 +9,10 @@
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
 ### Update
+* 01/27/2014
+  > Fix bugs
+  >> Mr. Jingles's words (Chrome Update)
+
 * 10/06/2013
   > Fix bugs
   >> Google changed G+ class name
