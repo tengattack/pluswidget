@@ -225,6 +225,7 @@ function initOptions() {
               data-slider-orientation="horizontal" \
               data-slider-selection="after" \
               data-slider-tooltip="hide">';
+            tabcontent += '<span class="slider-value">' + value + '</span>';
             break;
         }
         tabcontent += '</div>\
@@ -257,7 +258,18 @@ function initOptions() {
     var subids = id.split('-');
     resetSettings(subids[2], subids[3]);
   });
-  $('input.slider').slider();
+  $('input.slider').slider({
+    formater: function (value) {
+      if (this.element && this.element.length > 0) {
+        var val = value;
+        if (parseInt(val) != val) {
+          //float
+          val = val.toFixed(2);
+        }
+        $(this.element[0]).parent().next('span').text(val);
+      }
+    }
+  });
 }
 
 function initPage() {

@@ -8,7 +8,17 @@
 ### Chrome Web Store
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
+### Add-ons for Firefox
+* https://addons.mozilla.org/en-US/firefox/addon/widget/
+
 ### Update
+* 03/02/2014
+  > Add functions
+  >> More columns
+
+  > Add options
+  >> Background size
+
 * 01/27/2014
   > Fix bugs
   >> Mr. Jingles's words (Chrome Update)

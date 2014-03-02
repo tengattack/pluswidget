@@ -169,6 +169,12 @@ var WIDGET = {
         placeholder: 'Image URL',
         default: "https://lh3.googleusercontent.com/-9AHCOqtqflI/UdTiPU2yDhI/AAAAAAAARiY/z3qmSmbPPzY/s0/34443805.jpg"
       },
+      size: {
+        name: 'Size (width height)',
+        type: 'string',
+        placeholder: 'Background size',
+        default: "100% auto"
+      },
       opacity: {
         name: 'Opacity',
         type: 'range',
@@ -221,6 +227,38 @@ var FUNCTION = {
         escape: true,
         placeholder: 'Text',
         default: "神兄さま、未読はありませんー"
+      }
+    }
+  },
+  morecol: {
+    name: "More columns",
+    author: "+五月栞 (腾袭)",
+    author_url: "https://plus.google.com/101975853170707139492",
+    preview_url: "https://lh5.googleusercontent.com/-nsgZXML8iV0/UxMznkeyITI/AAAAAAAAh8k/l4GOqHQ_1gs/s0/manycols.PNG",
+    description: "Give Google+ page more columns.",
+    settings: {
+      column: {
+        name: 'Columns',
+        type: 'range',
+        range: {
+          min: 2,
+          max: 12,
+          step: 1
+        },
+        placeholder: 'Columns',
+        default: 4
+      },
+      colwidth: {
+        name: 'Column Width',
+        type: 'number',
+        placeholder: 'Column Width',
+        default: 520
+      },
+      minwidth: {
+        name: 'Window Min Width',
+        type: 'number',
+        placeholder: 'Window Min Width',
+        default: 1920
       }
     }
   },
@@ -320,7 +358,7 @@ notify_pane:
 }",
 
 background:
-".Td{background:url('%url%') no-repeat;background-attachment:fixed}\
+".Td{background:url('%url%') no-repeat;background-attachment:fixed;background-size:%size%;}\
 .gb_fb,.gb_gb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
 .GY{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb{background:transparent !important;}\
 .SOb{background-color:transparent !important;border:none;}\
@@ -343,9 +381,8 @@ belltext:
 "var belltextNotify = function (e) {\
   var belltextel = document.getElementsByClassName('Kza');\
   if (belltextel !== undefined && belltextel.length > 0) {\
-    console.log(belltextel, belltextel[0].innerText);\
-    if (belltextel[0].innerText != \"%text%\" && belltextel[0].innerText != \"\") {\
-      belltextel[0].innerText = \"%text%\";\
+    if (belltextel[0].textContent != \"%text%\" && belltextel[0].textContent != \"\") {\
+      belltextel[0].textContent = \"%text%\";\
     }\
   }\
 };\
@@ -355,6 +392,7 @@ if (el !== undefined && el.length > 0) {\
     el[i].addEventListener('DOMSubtreeModified', belltextNotify, false);\
   }\
 }",
-
+morecol:
+"if($(window).width()>=%minwidth%){var SET_COL_COUNT=%column%;var SET_COL_WIDTH=%colwidth%;var ROW_HTML='<div class=\"Ypa jw Yc am\"></div>';var origCol=0;var newWidth=0;function quickSortById(arr){if(arr.length<=1){return arr}var pivotIndex=Math.floor(arr.length/2);var pivot=arr.splice(pivotIndex,1)[0];var left=[];var right=[];for(var i=0;i<arr.length;i++){if(arr[i].id<pivot.id){left.push(arr[i])}else{right.push(arr[i])}}return quickSortById(left).concat([pivot],quickSortById(right))}function insertRows(lastRow){$(lastRow).after(ROW_HTML)}function initVar(container){var layout=$(container).find(\".ona\");var width=layout.width();var divs=layout.children(\"div\");var currentRows=0;for(var i=0;i<divs.length;i++){if($(divs[i]).hasClass(\"Ypa\")){currentRows++}else{break}}origCol=currentRows;var sigleWidth;if(SET_COL_WIDTH){sigleWidth=SET_COL_WIDTH}else{sigleWidth=(width-(origCol-1)*20)/origCol}newWidth=sigleWidth*SET_COL_COUNT+(SET_COL_COUNT-1)*20}function rearrangeLayout(layout){layout=$(layout);var divs=layout.children(\"div\");var posts=[];var coldivrange=[];var needrabefore=false;var colStart=-1;var row=0;var i,j,k;for(i=0;i<=divs.length;i++){if(i<divs.length&&$(divs[i]).hasClass(\"Ypa\")){if(!needrabefore){colStart=i;posts.push([])}var po=$(divs[i]).children(\".Yp\");for(j=0;j<po.length;j++){posts[row].push(po[j])}needrabefore=true}else if(needrabefore){coldivrange.push([colStart,i]);needrabefore=false;rowsStart=-1;row++}}for(i=0;i<posts.length;i++){posts[i]=quickSortById(posts[i])}divs.find(\".Ypa .Yp\").remove();for(i=0;i<coldivrange.length;i++){for(j=0;j<posts[i].length;j++){var height=0;var addRowIndex=0;for(k=coldivrange[i][0];k<coldivrange[i][1];k++){var theight=$(divs[k]).height();if(k==coldivrange[i][0]||height>theight){height=theight;addRowIndex=k}}$(divs[addRowIndex]).append(posts[i][j])}}}function resetLayout(layout){if(resetting){return}resetting=true;layout=$(layout);layout.css(\"width\",newWidth+\"px\");var divs=layout.children(\"div\");var addRows=[];var rowCount=0;var i=0;for(i=0;i<=divs.length;i++){if(i<divs.length&&$(divs[i]).hasClass(\"Ypa\")){$(divs[i]).css(\"width\",SET_COL_WIDTH);rowCount++}else{while(rowCount<SET_COL_COUNT){addRows.push(i-1);rowCount++}rowCount=0}}for(i=0;i<addRows.length;i++){insertRows(divs[addRows[i]])}rearrangeLayout(layout);resetting=false}function resetContainer(container){console.log(\"resetContainer\");var sidebar=$(container).find(\".tna\");var layout=$(container).find(\".ona\");sidebar.css(\"width\",newWidth+134+\"px\");resetLayout(layout)}function insertPostFinish(){console.log(\"insertPostFinish\");resetContainer(container)}function resetInsertPostTimeout(){if(insTimeID){clearTimeout(insTimeID)}insTimeID=setTimeout(insertPostFinish,500)}var insTimeID=0;var resetting=false;var container=$(\".Dh\");var containerel=container.get(0);initVar(container);resetContainer(container);containerel.addEventListener(\"DOMNodeInserted\",function(e){if(e.relatedNode){var node=$(e.relatedNode);if(node.hasClass(\"Dh\")){console.warn(\"layout Inserted!\",e);resetContainer(e.target)}else if(node.hasClass(\"ona\")){resetInsertPostTimeout()}else if(node.hasClass(\"Ypa\")){if(resetting)return;resetInsertPostTimeout()}}},false);}",
 custom: "%content%"
 };

@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "name": "+Widget",
   "default_locale": "en",
-  "version": "0.963.18",
+  "version": "0.970.2",
   "description": "__MSG_description__",
   "permissions": [
     "storage",
@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["http://plus.google.com/*", "https://plus.google.com/*"],
-      "js": ["js/googlepluswidget.js", "js/gpw-db.js", "js/gpw-page.js"],
+      "js": ["js/jquery-1.11.0.min.js", "js/googlepluswidget.js", "js/gpw-db.js", "js/gpw-page.js"],
       "run_at": "document_end",
       "all_frames": true
     }
