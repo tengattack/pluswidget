@@ -230,6 +230,15 @@ var FUNCTION = {
       }
     }
   },
+  kankore_footer: {
+    name: "Kankore bath",
+    author: "萌购",
+    author_url: "http://www.030buy.com/",
+    preview_url: "https://lh4.googleusercontent.com/-vXSp9ZkIxxE/UzL4MEG4dCI/AAAAAAAAjkU/VP4GNxACi1s/s0/kankorefooter.PNG",
+    description: "Kankore bath in footer. Collect by <a href=\"https://plus.google.com/u/0/107142103119739092775\" target=\"_blank\">+Phoenix Nemo</a>, idea from <a href=\"https://plus.google.com/103290181840825623661\" target=\"_blank\">+HY HYatt</a>.<br><a href=\"https://github.com/phoenixlzx/kankore_footer\" target=\"_blank\">view in github</a>",
+    settings: {
+    }
+  },
   morecol: {
     name: "More columns",
     author: "+五月栞 (腾袭)",
@@ -359,7 +368,7 @@ notify_pane:
 
 background:
 ".Td{background:url('%url%') no-repeat;background-attachment:fixed;background-size:%size%;}\
-.gb_fb,.gb_gb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
+.gb_fb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
 .GY{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb{background:transparent !important;}\
 .SOb{background-color:transparent !important;border:none;}\
 .t3{background-color:transparent;}.TQc{opacity:%opacity%;}\
@@ -391,6 +400,15 @@ if (el !== undefined && el.length > 0) {\
   for (var i = 0; i < el.length; i++) {\
     el[i].addEventListener('DOMSubtreeModified', belltextNotify, false);\
   }\
+}",
+kankore_footer:
+"if (this.inpage) {\
+  this.pageinsert('kankore_footer', \
+    [\
+      { type: 'css', url: 'style.css'},\
+      { type: 'html', url: 'footer.html', afterSelector: '.Z0'},\
+      { type: 'js', url: 'kankore_bath.js'}\
+    ]);\
 }",
 morecol:
 "if($(window).width()>=%minwidth%){\

@@ -9,6 +9,7 @@ function GooglePlusWidget() {
 
 GooglePlusWidget.prototype.init = function (callback) {
   var that = this;
+  this.checkinpage();
   ex.sendRequest({action: 'pageAction.show'});
   ex.sendRequest({action: 'getStorage'}, function (r) {
     that.storage = r.storage;
@@ -20,6 +21,16 @@ GooglePlusWidget.prototype.init = function (callback) {
   console.log('google+ widget load!');
 };
 
+GooglePlusWidget.prototype.checkinpage = function () {
+  this.inpage = false;
+  try {
+    if (self.frameElement == null) {
+      this.inpage = true;
+    }
+  } catch (e) {
+  }
+};
+
 GooglePlusWidget.prototype.setval = function (key, value) {
   ex.sendRequest({action: 'setVal', key: key, value: value});
 };
@@ -29,11 +40,66 @@ GooglePlusWidget.prototype.update = function () {
 };
 
 GooglePlusWidget.prototype.pageaddstyle = function (content) {  
-  var style = document.createElement("style");   
-  style.type = "text/css";   
+  var style = document.createElement("style");
+  style.id = 'gpw-style-global';
+  style.type = "text/css";
   //style.innerHTML = content;  //Safari、Chrome 下innerHTML只读  
-  style.textContent = content;  
+  style.textContent = content;
   document.getElementsByTagName("head")[0].appendChild(style);
+};
+
+GooglePlusWidget.prototype.pageinsert = function (id, type, url, afterSelector) {
+  if (type instanceof Array) {
+    for (var i in type) {
+      var item = type[i];
+      this.pageinsert(id, item.type, item.url, item.afterSelector);
+    }
+    return;
+  }
+  var baseUrl = ex.getURL('widget/' + id + '/');
+  if (type == 'css') {
+    $.ajax({
+      url: baseUrl + url,
+      success: function (data) {
+        var regexp = / url\("(.+?)"\)/gi;
+        data = data.replace(regexp, ' url("' + baseUrl + '$1")');
+        var style = document.createElement('style');
+        style.id = 'gpw-style-' + id;
+        style.type = "text/css";
+        style.rel = 'stylesheet';
+        style.textContent = data;
+        //style.href = ex.getURL(url);
+        document.getElementsByTagName('head')[0].appendChild(style);
+      }
+    });
+
+  } else if (type == 'js') {
+    $.ajax({
+      url: baseUrl + url,
+      success: function (data) {
+        try {
+          eval(data);
+        } catch (e) {
+        }
+      }
+    });
+    /*
+      var s = document.createElement('script');
+      s.id = 'gpw-script-' + id;
+      s.src = ex.getURL(url);
+      document.getElementsByTagName('head')[0].appendChild(s);
+    */
+  } else if (type == 'html') {
+    $.ajax({
+      url: baseUrl + url,
+      success: function (data) {
+        var regexp = / src="(.+?)"/gi;
+        data = data.replace(regexp, ' src="' + baseUrl + '$1"');
+        var html = '<div id="gpw-element-' + id + '">' + data + '</div>';
+        $(afterSelector).after(html);
+      }
+    });
+  }
 };
 
 GooglePlusWidget.prototype.escape = function (str) {

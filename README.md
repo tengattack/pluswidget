@@ -12,6 +12,12 @@
 * https://addons.mozilla.org/en-US/firefox/addon/widget/
 
 ### Update
+* 03/27/2014
+  > Add functions
+  >> Kankore bath
+
+  > Update framework
+
 * 03/02/2014
   > Add functions
   >> More columns
