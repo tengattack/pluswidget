@@ -180,7 +180,12 @@ function initOptions() {
       for (var s in settings) {
         var inputId = 'input-' + catid + '-settings-' + s;
         var inputName = cat + '_' + w + '_settings[' + s + ']';
-        var value = storage_widget_style[s] ? storage_widget_style[s] : settings[s].default;
+        var value;
+        if (storage_widget_style[s] !== undefined) {
+          value = storage_widget_style[s];
+        } else {
+          value = settings[s].default;
+        }
         if (storage_widget_style[s]) {
           if (settings[s].escape) {
             value = gpw.unescape(value, cat);
@@ -197,6 +202,8 @@ function initOptions() {
         tabcontent += '<div class="control-group">\
           ' + (settings[s].type !== 'boolean' ? '<label class="control-label" for="' + inputId + '">' + settings[s].name + '</label>' : '') + '\
           <div class="controls">';
+
+        console.log(inputId, value);
 
         switch (settings[s].type) {
           case 'boolean':
