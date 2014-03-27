@@ -427,7 +427,7 @@ kankore_footer:
     ]);\
 }",
 morecol:
-"if($(window).width()>=%minwidth%) {\
+"if($(window).width() >= %minwidth%) {\
   this.pageinsert('morecol', \
     'js', 'gplus-morecol.js', { column: %column%, colwidth: %colwidth% }\
   );\

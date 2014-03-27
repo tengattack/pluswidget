@@ -4,8 +4,8 @@
 * Depend: jquery
 */
 
-var SET_COL_COUNT = 4;
-var SET_COL_WIDTH = 520;
+var SET_COL_COUNT = %column%;
+var SET_COL_WIDTH = %colwidth%;
 var ROW_HTML = '<div class="Ypa jw Yc am"></div>';
 
 var origCol = 0;
