@@ -93,7 +93,7 @@ var prefixs = ["-webkit-", "-moz-", "-ms-", ""];
         mouse_move_flag = false;
 
         // 记录鼠标点击的位置与舰娘图像的左上角坐标差
-        offsetX = kan.offset().left - e.screenX;
+        offsetX = kan.offset().left - e.pageX;
         offsetY = kan.offset().top - e.pageY;
     }
 
@@ -128,9 +128,9 @@ var prefixs = ["-webkit-", "-moz-", "-ms-", ""];
             // 有移动则是鼠标拖拽事件
             kan.removeClass('dragging').addClass('dropping');
 
-            if( $.browser.msie && $.browser.version < 10 )
+            /*if( $.browser.msie && $.browser.version < 10 )
                 kan.animate({'left': x, 'top': y}, 800);
-            else
+            else*/
                 kan.css({'left': x, 'top': y});
 
             setTimeout(function() {
