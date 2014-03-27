@@ -203,8 +203,6 @@ function initOptions() {
           ' + (settings[s].type !== 'boolean' ? '<label class="control-label" for="' + inputId + '">' + settings[s].name + '</label>' : '') + '\
           <div class="controls">';
 
-        console.log(inputId, value);
-
         switch (settings[s].type) {
           case 'boolean':
             tabcontent += '\
@@ -298,7 +296,7 @@ $(document).ready(function() {
 
   // i18n
   $('#home-well').text(chrome.i18n.getMessage("description"));
-  $.ajax({
+  gpw.ajax({
     url: './README.md',
     success: function (data) {
       data = htmlencode(data);

@@ -39,6 +39,8 @@ GooglePlusWidget.prototype.update = function () {
   ex.sendRequest({action: 'setStorage', storage: this.storage});
 };
 
+GooglePlusWidget.prototype.ajax = $.ajax;
+
 GooglePlusWidget.prototype.pageaddstyle = function (content) {  
   var style = document.createElement("style");
   style.id = 'gpw-style-global';
@@ -58,7 +60,7 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, settings) {
   }
   var baseUrl = ex.getURL('widget/' + id + '/');
   if (type == 'css') {
-    $.ajax({
+    this.ajax({
       url: baseUrl + url,
       success: function (data) {
         var regexp = / url\("(.+?)"\)/gi;
@@ -75,7 +77,7 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, settings) {
 
   } else if (type == 'js') {
     var that = this;
-    $.ajax({
+    this.ajax({
       url: baseUrl + url,
       success: function (data) {
         var subjs = that.makejs(data, settings);
@@ -93,7 +95,7 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, settings) {
     */
   } else if (type == 'html') {
     if (settings && settings.afterSelector) {
-      $.ajax({
+      this.ajax({
         url: baseUrl + url,
         success: function (data) {
           var regexp = / src="(.+?)"/gi;
