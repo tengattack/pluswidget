@@ -48,11 +48,11 @@ GooglePlusWidget.prototype.pageaddstyle = function (content) {
   document.getElementsByTagName("head")[0].appendChild(style);
 };
 
-GooglePlusWidget.prototype.pageinsert = function (id, type, url, afterSelector) {
+GooglePlusWidget.prototype.pageinsert = function (id, type, url, settings) {
   if (type instanceof Array) {
     for (var i in type) {
       var item = type[i];
-      this.pageinsert(id, item.type, item.url, item.afterSelector);
+      this.pageinsert(id, item.type, item.url, item.settings);
     }
     return;
   }
@@ -74,11 +74,13 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, afterSelector) 
     });
 
   } else if (type == 'js') {
+    var that = this;
     $.ajax({
       url: baseUrl + url,
       success: function (data) {
+        var subjs = that.makejs(data, settings);
         try {
-          eval(data);
+          eval(subjs);
         } catch (e) {
         }
       }
@@ -90,15 +92,17 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, afterSelector) 
       document.getElementsByTagName('head')[0].appendChild(s);
     */
   } else if (type == 'html') {
-    $.ajax({
-      url: baseUrl + url,
-      success: function (data) {
-        var regexp = / src="(.+?)"/gi;
-        data = data.replace(regexp, ' src="' + baseUrl + '$1"');
-        var html = '<div id="gpw-element-' + id + '">' + data + '</div>';
-        $(afterSelector).after(html);
-      }
-    });
+    if (settings && settings.afterSelector) {
+      $.ajax({
+        url: baseUrl + url,
+        success: function (data) {
+          var regexp = / src="(.+?)"/gi;
+          data = data.replace(regexp, ' src="' + baseUrl + '$1"');
+          var html = '<div id="gpw-element-' + id + '">' + data + '</div>';
+          $(settings.afterSelector).after(html);
+        }
+      });
+    }
   }
 };
 
@@ -177,6 +181,22 @@ GooglePlusWidget.prototype.setstyle = function () {
   }
 };
 
+GooglePlusWidget.prototype.makejs = function (code, settings) {
+  if (!settings) {
+    return code;
+  }
+  for (var key in settings) {
+    try {
+      var regexp = new RegExp('%' + key + '%', 'g');
+      var text = String(settings[key]);
+      code = code.replace(regexp, text);
+    } catch (e) {
+      break;
+    }
+  }
+  return code;
+};
+
 GooglePlusWidget.prototype.runjs = function () {
   if (!this.storage) {
     return;
@@ -185,16 +205,7 @@ GooglePlusWidget.prototype.runjs = function () {
     for (var id in this.storage.function) {
       var functions = this.storage.function;
       if (functions[id] && functions[id].enable && functions[id].settings && JS_RUN[id]) {
-        var subjs = JS_RUN[id];
-        for (key in functions[id].settings) {
-          try {
-            var regexp = new RegExp('%' + key + '%', 'g');
-            var text = functions[id].settings[key];
-            subjs = subjs.replace(regexp, text);
-          } catch (e) {
-            break;
-          }
-        }
+        var subjs = this.makejs(JS_RUN[id], functions[id].settings);
         try {
           eval(subjs);
         } catch (e) {

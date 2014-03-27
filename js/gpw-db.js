@@ -237,6 +237,22 @@ var FUNCTION = {
     preview_url: "https://lh4.googleusercontent.com/-vXSp9ZkIxxE/UzL4MEG4dCI/AAAAAAAAjkU/VP4GNxACi1s/s0/kankorefooter.PNG",
     description: "Kankore bath in footer. Collect by <a href=\"https://plus.google.com/u/0/107142103119739092775\" target=\"_blank\">+Phoenix Nemo</a>, idea from <a href=\"https://plus.google.com/103290181840825623661\" target=\"_blank\">+HY HYatt</a>.<br><a href=\"https://github.com/phoenixlzx/kankore_footer\" target=\"_blank\">view in github</a>",
     settings: {
+      loop: {
+        name: 'Loop',
+        type: 'boolean',
+        default: true
+      },
+      speed: {
+        name: 'Speed',
+        type: 'range',
+        range: {
+          min: 3,
+          max: 50,
+          step: 1
+        },
+        placeholder: 'Speed',
+        default: 10
+      }
     }
   },
   morecol: {
@@ -406,8 +422,8 @@ kankore_footer:
   this.pageinsert('kankore_footer', \
     [\
       { type: 'css', url: 'style.css'},\
-      { type: 'html', url: 'footer.html', afterSelector: '.Z0'},\
-      { type: 'js', url: 'kankore_bath.js'}\
+      { type: 'html', url: 'footer.html', settings: {afterSelector: '.Z0'} },\
+      { type: 'js', url: 'kankore_bath.js', settings: { loop: %loop%, speed: %speed% } }\
     ]);\
 }",
 morecol:
