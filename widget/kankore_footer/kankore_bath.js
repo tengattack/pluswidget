@@ -9,6 +9,10 @@ var prefixs = ["-webkit-", "-moz-", "-ms-", ""];
 
     var _loop = %loop%;
     var _speed = %speed%;
+    var _image = '%image%';
+    if (_image == ['%', 'image', '%'].join('')) {
+        _image = '';
+    }
 
     var kans = $('.kankore-bath .kan'),
         kan_id,
@@ -37,9 +41,17 @@ var prefixs = ["-webkit-", "-moz-", "-ms-", ""];
     var tick = null;
 
     function kan_init() {
-        // 随机选择一只舰娘
-        kan_id = Math.floor(Math.random()*kans.length);
-        kan = kans.eq(kan_id);
+        if (_image) {
+            $(kans[kans.length - 1]).after(
+                '<div class="custom kan">\
+                    <img src="' + _image + '" width="170px">\
+                </div>');
+            kan = $('.custom.kan');
+        } else {
+            // 随机选择一只舰娘
+            kan_id = Math.floor(Math.random()*kans.length);
+            kan = kans.eq(kan_id);
+        }
 
         // 随机从左侧或右侧进入屏幕
         screen_width = $(window).width();

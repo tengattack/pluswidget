@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "name": "+Widget",
   "default_locale": "en",
-  "version": "0.980.9",
+  "version": "0.980.10",
   "description": "__MSG_description__",
   "permissions": [
     "storage",

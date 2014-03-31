@@ -252,6 +252,12 @@ var FUNCTION = {
         },
         placeholder: 'Speed',
         default: 10
+      },
+      image: {
+        name: 'Set Image',
+        type: 'string',
+        placeholder: 'Image URL, leave empty means use random image.',
+        default: ''
       }
     }
   },
@@ -423,7 +429,7 @@ kankore_footer:
     [\
       { type: 'css', url: 'style.css'},\
       { type: 'html', url: 'footer.html', settings: { afterSelector: '.Z0'} },\
-      { type: 'js', url: 'kankore_bath.js', settings: { loop: %loop%, speed: %speed% } }\
+      { type: 'js', url: 'kankore_bath.js', settings: { loop: %loop%, speed: %speed%, image: \'%image%\' } }\
     ]);\
 }",
 morecol:

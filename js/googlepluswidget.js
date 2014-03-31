@@ -111,13 +111,15 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, settings) {
 GooglePlusWidget.prototype.escape = function (str) {
   return String(str)
           .replace(/"/g, "\\\"")
-          .replace(/'/g, "\\'");
+          .replace(/'/g, "\\'")
+          .replace(/\\/g, "\\\\");
 };
 
 GooglePlusWidget.prototype.unescape = function (str) {
   return String(str)
           .replace(/\\\"/g, "\"")
-          .replace(/\\'/g, "'");
+          .replace(/\\'/g, "'")
+          .replace(/\\\\/g, "\\");
 };
 
 GooglePlusWidget.prototype.setstyle = function () {
