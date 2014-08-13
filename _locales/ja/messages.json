@@ -25,5 +25,8 @@
   },
   "Reset": {
     "message": "リセット"
+  },
+  "AllPlusOne": {
+    "message": "全ての投稿を +1"
   }
 }

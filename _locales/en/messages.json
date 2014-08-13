@@ -25,5 +25,8 @@
   },
   "Reset": {
     "message": "Reset"
+  },
+  "AllPlusOne": {
+    "message": "+1 all posts"
   }
 }

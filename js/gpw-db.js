@@ -261,6 +261,16 @@ var FUNCTION = {
       }
     }
   },
+  allplusone: {
+    name: "All +1",
+    author: "+五月栞 (腾袭)",
+    author_url: "https://plus.google.com/101975853170707139492",
+    preview_url: "https://lh4.googleusercontent.com/-Qt7dAvASOIA/U-igBS5LDJI/AAAAAAAApL0/-v2M81tHKZg/s0/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%2B2014-08-11%2B%E4%B8%8B%E5%8D%886.50.16.png",
+    description: "All posts in this page plus one.",
+    settings: {
+
+    }
+  },
   morecol: {
     name: "More columns",
     author: "+五月栞 (腾袭)",
@@ -391,7 +401,7 @@ notify_pane:
 background:
 ".Td{background:url('%url%') no-repeat;background-attachment:fixed;background-size:%size%;}\
 .gb_fb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
-.GY{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb{background:transparent !important;}\
+.GY{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb,.uoGTZe{background:transparent !important;}\
 .SOb{background-color:transparent !important;border:none;}\
 .t3{background-color:transparent;}.TQc{opacity:%opacity%;}\
 .ve,.Yp,.Xa{background-color:transparent;}.Ee,.Ee.Yb,.b2,.Zva,.Sb,.Ue{background-color:rgba(255,255,255,%opacity%);border-color:rgba(216,216,216,%opacity%);}.eNd,.hn,.INc{background-color:rgba(255,255,255,%opacity%)}\
@@ -430,6 +440,14 @@ kankore_footer:
       { type: 'css', url: 'style.css'},\
       { type: 'html', url: 'footer.html', settings: { afterSelector: '.Z0'} },\
       { type: 'js', url: 'kankore_bath.js', settings: { loop: %loop%, speed: %speed%, image: \'%image%\' } }\
+    ]);\
+}",
+allplusone:
+"if (this.inpage) {\
+  this.pageinsert('allplusone', \
+    [\
+      { type: 'css', url: 'style.css' },\
+      { type: 'js', url: 'allplusone.js' }\
     ]);\
 }",
 morecol:

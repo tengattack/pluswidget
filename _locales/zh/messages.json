@@ -25,5 +25,8 @@
   },
   "Reset": {
     "message": "重置"
+  },
+  "AllPlusOne": {
+    "message": "为所有信息 +1"
   }
 }

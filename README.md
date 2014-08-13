@@ -12,6 +12,10 @@
 * https://addons.mozilla.org/en-US/firefox/addon/widget/
 
 ### Update
+* 08/11/2014
+  > Add functions
+  >> All +1
+
 * 03/27/2014
   > Add functions
   >> Kankore bath

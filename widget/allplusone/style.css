@@ -1,0 +1,25 @@
+#pb-allplusone {
+  display: none;
+  position: absolute;
+  width: 0;
+  /* width: 38px; */
+  padding: 0;
+  height: 28px;
+  border-color: transparent;
+  background-color: #dd4b39;
+  transition: width .218s;
+  -webkit-transition: width .218s;
+}
+#allplusone {
+  position: relative;
+  margin-left: 120px;
+  margin-top: 7px;
+  z-index: 12;
+  transition: margin-left .218s;
+  -webkit-transition: margin-left .218s;
+}
+.TVa.wld + #allplusone {
+  position: fixed;
+  top: 0;
+  margin-left: 105px !important;
+}
