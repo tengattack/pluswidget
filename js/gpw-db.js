@@ -401,14 +401,14 @@ notify_pane:
 background:
 ".Td{background:url('%url%') no-repeat;background-attachment:fixed;background-size:%size%;}\
 .gb_fb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
-.GY{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb,.uoGTZe{background:transparent !important;}\
+.GY,.Wm,.Sk{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb,.uoGTZe{background:transparent !important;}\
 .SOb{background-color:transparent !important;border:none;}\
 .t3{background-color:transparent;}.TQc{opacity:%opacity%;}\
 .ve,.Yp,.Xa{background-color:transparent;}.Ee,.Ee.Yb,.b2,.Zva,.Sb,.Ue{background-color:rgba(255,255,255,%opacity%);border-color:rgba(216,216,216,%opacity%);}.eNd,.hn,.INc{background-color:rgba(255,255,255,%opacity%)}\
 .fr,.cO .by .MHa:hover,.cO .by .fya:hover{background-color:rgba(248,248,248,%aopacity%);}.hf{background-color:rgba(255,255,255,%aopacity%) !important;}.ej,.kv{background-color:rgba(245,245,245,%aopacity%);}\
 .WR,.TC,.bD,.TR,.vy,.bS,.zj,.Xc,.if,.em,.aIb,.Bha,.Bha .jw,.Bha .Yp,.cS,.nB,.Bc,.eg,.MR,.fm,.Mna,.aR,.Rj .Nf{background-color:transparent;}.em:before,.Mna:before{background:none}\
 .b-c-R,.Mu .b-c-R,.Gc.esw,.Dg,.wu,.cp,.b-hb,.Id>.eswd,.es,.FF .b-P,.g-h-f-vc-B,.g-h-f-V-nb,.Rd,.cO .by .HY,.b-c-R.b-c-I,.FC,.Zg:hover .gn{background-color:rgba(255,255,255,%aopacity%)}.cc{background-color:rgba(255,255,255,%aopacity%) !important;}.Gc.esw,.Dg,.b-hb,.Id>.eswd{border-color:rgba(217,217,217,%aopacity%);}.es,.iH,.g-h-f-vc-B,.g-h-f-k .g-h-f-V-nb,.Rd,.eg{border-color:rgba(228,228,228,%aopacity%);}.cO .by .HY{border-color:rgba(248,248,248,%aopacity%);}.wu{border-color:rgba(221,221,221,%aopacity%);}.cp{border-color:rgba(204,204,204,%aopacity%);}\
-.oB,.cg{border-color:rgba(229,229,229,%aopacity%);}.vt,.gi{border-color:rgba(229,229,229,%aopacity%) !important;}.d-cm{border-color:rgba(235,235,235,%aopacity%)}\
+.oB,.cg,.Wm,.Sk{border-color:rgba(229,229,229,%aopacity%);}.vt,.gi{border-color:rgba(229,229,229,%aopacity%) !important;}.d-cm{border-color:rgba(235,235,235,%aopacity%)}\
 .Pe-ub-Db-Bg-Cl{background-color:rgba(229,229,229,%aopacity%);}\
 .Be .l7{border-top-color:rgba(255,255,255,%aopacity%);}.Be .k7,.oo{display:none;}.VK{border-top: 15px solid rgba(245,245,245,%aopacity%);border-left: 15px solid transparent;border-right:none;border-bottom:none;}\
 .b-c-U{background-color:rgba(66,127,237,%opacity%);}\

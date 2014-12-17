@@ -3,8 +3,9 @@
 
   "manifest_version": 2,
   "name": "+Widget",
+  "short_name": "pluswidget",
   "default_locale": "en",
-  "version": "0.981.1",
+  "version": "0.981.3",
   "description": "__MSG_description__",
   "permissions": [
     "storage",
@@ -12,7 +13,7 @@
     "http://plus.google.com/",
   	"https://plus.google.com/"
   ],
-  "content_security_policy": "script-src 'self' chrome-extension://; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "content_scripts": [
     {
       "matches": ["http://plus.google.com/*", "https://plus.google.com/*"],
