@@ -400,7 +400,7 @@ notify_pane:
 
 background:
 ".Td{background:url('%url%') no-repeat;background-attachment:fixed;background-size:%size%;}\
-.gb_fb,#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
+#gb > div:first-child{background:rgba(255,255,255,%opacity%) !important;}.gbqfqw{background:transparent;}.gb_qb,.gb_rb{background:transparent !important;}.gbqfb{opacity:%opacity%;}\
 .GY,.Wm,.Sk{background-color:transparent;}.Uc,.JNc{background-color:rgba(245,245,245,%opacity%) !important;}.fOa,.YZb,.uoGTZe{background:transparent !important;}\
 .SOb{background-color:transparent !important;border:none;}\
 .t3{background-color:transparent;}.TQc{opacity:%opacity%;}\
