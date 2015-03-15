@@ -303,6 +303,13 @@ var FUNCTION = {
       }
     }
   },
+  nsfw: {
+    name: "NSFW",
+    author: "+五月栞 (腾袭)",
+    author_url: "https://plus.google.com/101975853170707139492",
+    preview_url: "https://lh3.googleusercontent.com/-emwT-N8fauE/VQVO9X1BcPI/AAAAAAAAu2E/WGIiBvetWNA/s0/gplus-nsfw.PNG",
+    description: "Hide all images in posts, and it will appear after you click it.<br><br>Thanks <a target=\"_blank\" href=\"https://plus.google.com/109766076672185281895\">+Fubuki Hoshino</a> "
+  },
   custom: {
     name: "Custom",
     author: "You",
@@ -451,10 +458,18 @@ allplusone:
     ]);\
 }",
 morecol:
-"if($(window).width() >= %minwidth%) {\
+"if (this.inpage && $(window).width() >= %minwidth%) {\
   this.pageinsert('morecol', \
     'js', 'gplus-morecol.js', { column: %column%, colwidth: %colwidth% }\
   );\
+}",
+nsfw:
+"if (this.inpage) {\
+  this.pageinsert('nsfw', \
+    [\
+      { type: 'css', url: 'style.css' },\
+      { type: 'js', url: 'gplus-nsfw.js' }\
+    ]);\
 }",
 custom: "%content%"
 };

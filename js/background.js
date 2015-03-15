@@ -86,7 +86,9 @@ ex.onRequest.addListener(function (request, sender, sendResponse) {
   if (request && request.action) {
     switch (request.action) {
       case 'pageAction.show':
-        chrome.pageAction.show(sender.tab.id);
+        if (sender.tab) {
+          chrome.pageAction.show(sender.tab.id);
+        }
         break;
       case 'getStorage':
         sendResponse({storage: storage});

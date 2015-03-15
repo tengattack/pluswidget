@@ -9,9 +9,14 @@
 * https://chrome.google.com/webstore/detail/hflefagklffjeimdjeaaeongjadjdefp
 
 ### Add-ons for Firefox
-* https://addons.mozilla.org/en-US/firefox/addon/widget/
+* https://bless.moe/io/plugins/firefox/pluswidget.xpi
+* https://addons.mozilla.org/en-US/firefox/addon/widget/ (**Deprecated**)
 
 ### Update
+* 03/15/2015
+  > Add functions
+  >> NSFW
+
 * 08/11/2014
   > Add functions
   >> All +1

@@ -1,0 +1,9 @@
+/* .q9.yg */
+
+.sp.ej img {
+  display: none;
+}
+
+.sp.ej.showimages img {
+  display: block;
+}

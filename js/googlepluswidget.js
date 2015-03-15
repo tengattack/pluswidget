@@ -13,7 +13,7 @@ GooglePlusWidget.prototype.init = function (callback) {
   ex.sendRequest({action: 'pageAction.show'});
   ex.sendRequest({action: 'getStorage'}, function (r) {
     that.storage = r.storage;
-    console.log(r.storage);
+    //console.log(r.storage);
     if (callback) {
       callback();
     }
