@@ -434,7 +434,7 @@ belltext:
     }\
   }\
 };\
-var el = document.getElementsByClassName('ZvqKKc');\
+var el = document.getElementsByClassName('X6Wtlf');\
 if (el !== undefined && el.length > 0) {\
   for (var i = 0; i < el.length; i++) {\
     el[i].addEventListener('DOMSubtreeModified', belltextNotify, false);\

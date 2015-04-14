@@ -5,7 +5,7 @@
   "name": "+Widget",
   "short_name": "pluswidget",
   "default_locale": "en",
-  "version": "0.982.1",
+  "version": "0.982.2",
   "description": "__MSG_description__",
   "permissions": [
     "storage",
