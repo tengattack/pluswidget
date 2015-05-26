@@ -41,11 +41,11 @@ GooglePlusWidget.prototype.update = function () {
 
 GooglePlusWidget.prototype.ajax = $.ajax;
 
-GooglePlusWidget.prototype.pageaddstyle = function (content) {  
+GooglePlusWidget.prototype.pageaddstyle = function (content) {
   var style = document.createElement("style");
   style.id = 'gpw-style-global';
   style.type = "text/css";
-  //style.innerHTML = content;  //Safari、Chrome 下innerHTML只读  
+  //style.innerHTML = content;  //Safari、Chrome 下innerHTML只读
   style.textContent = content;
   document.getElementsByTagName("head")[0].appendChild(style);
 };

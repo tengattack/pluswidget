@@ -342,7 +342,7 @@ bell:
   background-position: center 118px;\
 }",
 
-sharebox: 
+sharebox:
 ".hd {\
   position: relative;\
 }\
@@ -367,7 +367,7 @@ sharebox:
   left: %left%px;\
 }",
 
-ribbon_home: 
+ribbon_home:
 ".Cld.CmS1q {\
   overflow: visible;\
 }\
@@ -426,7 +426,8 @@ custom: "%content%"
 
 var JS_RUN = {
 belltext:
-"var belltextNotify = function (e) {\
+"if (!this.inpage) {\
+var belltextNotify1 = function (e) {\
   var belltextel = document.getElementsByClassName('Kza');\
   if (belltextel !== undefined && belltextel.length > 0) {\
     if (belltextel[0].textContent != \"%text%\" && belltextel[0].textContent != \"\") {\
@@ -434,11 +435,26 @@ belltext:
     }\
   }\
 };\
-var el = document.getElementsByClassName('X6Wtlf');\
-if (el !== undefined && el.length > 0) {\
-  for (var i = 0; i < el.length; i++) {\
-    el[i].addEventListener('DOMSubtreeModified', belltextNotify, false);\
+var belltextNotify2 = function (e) {\
+  var belltextel = document.getElementsByClassName('X6Wtlf');\
+  if (belltextel !== undefined && belltextel.length > 0) {\
+    bindel('eGFnrc', belltextNotify2, true);\
+    bindel('X6Wtlf', belltextNotify1);\
   }\
+};\
+var bindel = function (clsname, func, remove) {\
+  var el = document.getElementsByClassName(clsname);\
+  if (el !== undefined && el.length > 0) {\
+    for (var i = 0; i < el.length; i++) {\
+      if (remove) {\
+        el[i].removeEventListener('DOMSubtreeModified', func, false);\
+      } else {\
+        el[i].addEventListener('DOMSubtreeModified', func, false);\
+      }\
+    }\
+  }\
+};\
+bindel('eGFnrc', belltextNotify2);\
 }",
 kankore_footer:
 "if (this.inpage) {\
