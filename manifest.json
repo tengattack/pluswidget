@@ -1,11 +1,10 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
-
+  "update_url": "https://clients2.google.com/service/update2/crx",
   "manifest_version": 2,
   "name": "+Widget",
   "short_name": "pluswidget",
   "default_locale": "en",
-  "version": "0.990.1",
+  "version": "1.0.2",
   "description": "__MSG_description__",
   "permissions": [
     "storage",
