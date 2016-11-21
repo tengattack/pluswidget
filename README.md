@@ -1,6 +1,6 @@
 ### Author
 * [腾袭](http://tengattack.com) [(+五月栞)](https://plus.google.com/101975853170707139492)
-* Copyright (c) 2013 tengattack
+* Copyright (c) 2016 tengattack
 
 ### License
 * [GPLv3](http://www.gnu.org/licenses/gpl.html)
@@ -13,6 +13,10 @@
 * https://addons.mozilla.org/en-US/firefox/addon/widget/ (**Deprecated**)
 
 ### Update
+* 11/21/2016
+  > Update functions
+  >> All Plus One (Support new version of Google+)
+
 * 03/15/2015
   > Add functions
   >> NSFW
@@ -24,7 +28,7 @@
 * 03/27/2014
   > Add functions
   >> Kankore bath
-  
+
   >> Add options to Kankore bath. *NOTE: you need to reset options for this function!*
 
   > Update framework
@@ -50,7 +54,7 @@
 
   > Fix bugs
   >> Mr. Jingles (Update after G+ has changed its style)
-  
+
 * 07/20/2013
   > Fix bugs
   >> Mr. Jingles's words (Google Update CSS class name)
