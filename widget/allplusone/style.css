@@ -1,4 +1,12 @@
-#pb-allplusone {
+#allplusone {
+  position: relative;
+  margin-left: 120px;
+  margin-top: 7px;
+  z-index: 12;
+  transition: margin-left .218s;
+  -webkit-transition: margin-left .218s;
+}
+#allplusone #pb-allplusone {
   display: none;
   position: absolute;
   width: 0;
@@ -10,16 +18,25 @@
   transition: width .218s;
   -webkit-transition: width .218s;
 }
-#allplusone {
-  position: relative;
-  margin-left: 120px;
-  margin-top: 7px;
-  z-index: 12;
-  transition: margin-left .218s;
-  -webkit-transition: margin-left .218s;
-}
 .TVa.wld + #allplusone {
   position: fixed;
   top: 0;
   margin-left: 105px !important;
+}
+#allplusone-new .apo-progress-circle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+}
+#allplusone-new .apo-progress-circle svg circle {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 2;
+}
+#allplusone-new .apo-progress-circle .apo-progress {
+  stroke: #333;
+  stroke-dasharray: 56 777;
+  stroke-dashoffset: 56;
 }

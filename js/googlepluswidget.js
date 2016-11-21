@@ -13,7 +13,7 @@ GooglePlusWidget.prototype.init = function (callback) {
   ex.sendRequest({action: 'pageAction.show'});
   ex.sendRequest({action: 'getStorage'}, function (r) {
     that.storage = r.storage;
-    //console.log(r.storage);
+    //console.log('+widget', r.storage);
     if (callback) {
       callback();
     }
@@ -24,6 +24,9 @@ GooglePlusWidget.prototype.init = function (callback) {
 GooglePlusWidget.prototype.checkinpage = function () {
   this.inpage = false;
   try {
+    if (window.top == window) {
+      this.inpage = true;
+    }
     if (self.frameElement == null) {
       this.inpage = true;
     }
@@ -82,7 +85,8 @@ GooglePlusWidget.prototype.pageinsert = function (id, type, url, settings) {
       success: function (data) {
         var subjs = that.makejs(data, settings);
         try {
-          eval(subjs);
+          var fn = new Function(subjs);
+          fn.call(that);
         } catch (e) {
         }
       }
@@ -211,7 +215,8 @@ GooglePlusWidget.prototype.runjs = function () {
       if (functions[id] && functions[id].enable && functions[id].settings && JS_RUN[id]) {
         var subjs = this.makejs(JS_RUN[id], functions[id].settings);
         try {
-          eval(subjs);
+          var fn = new Function(subjs);
+          fn.call(this);
         } catch (e) {
         }
       }
