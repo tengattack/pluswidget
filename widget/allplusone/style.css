@@ -23,6 +23,21 @@
   top: 0;
   margin-left: 105px !important;
 }
+#allplusone-new {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0 0 0 15px;
+}
+#allplusone-new .apo-container {
+  position: relative;
+  height: 100%;
+}
+#allplusone-new .apo-line {
+  line-height: 30px;
+  text-align: center;
+}
 #allplusone-new .apo-progress-circle {
   position: absolute;
   top: 5px;

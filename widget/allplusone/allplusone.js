@@ -2,11 +2,11 @@ var loc_AllPlusOne = chrome.i18n.getMessage("AllPlusOne");
 var isNewVersion = !!$('#yDmH0d')[0];
 var el_apo;
 if (isNewVersion) {
-  var el_home_bell = $('.gb_rc'); //$('.JX8add');
-  el_apo = $(`<div id="allplusone-new" class="gb_Jc gb_R gb_sc">
-    <div class="gb_uc">
+  var el_gapps = $('#gbwa');
+  el_apo = $(`<div id="allplusone-new">
+    <div class="apo-container">
       <a id="btn-allplusone" class="gb_b" aria-haspopup="true" role="button" tabindex="0" aria-expanded="false" aria-label="${loc_AllPlusOne}" title="${loc_AllPlusOne}">
-        <div class="gb_vc">+1</div>
+        <div class="apo-line">+1</div>
         <div id="pb-allplusone" class="apo-progress-circle">
           <svg width="20" height="20" viewBox="0 0 20 20">
             <circle cx="10" cy="10" r="9"></circle>
@@ -16,7 +16,7 @@ if (isNewVersion) {
       </a>
     </div>
   </div>`);
-  el_home_bell.before(el_apo);
+  el_gapps.after(el_apo);
   // search button
   $('.JhVB8e').css('width', '205px');
 } else {
